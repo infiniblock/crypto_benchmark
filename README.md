@@ -122,3 +122,7 @@ SHA3: Hash 1024M bytes data, used:434 milliseconds
 # Conclusion 
 
 As the results show, we will use the **ED25519** as Infiniblock sign/verify algorithm, use the **SHA3** as the hash algorithm.
+
+As to compress, since current compress algorithm are uesless to signature, which is the main part of the transaction, do we really need compress? 
+
+The answer is NO!

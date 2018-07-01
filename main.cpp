@@ -1,6 +1,7 @@
 #include <iostream>
 #include "crypto_perf.hpp"
 #include "hash_perf.hpp"
+#include "compress_perf.hpp"
 #include <boost/program_options.hpp>
 
 
@@ -10,6 +11,7 @@ int main(int argc, char ** argv) {
 
     desc.add_options()
             ("crypto", "Do crypto benchmark")
+            ("compress", "Do compress benchmark")
             ("hash", "Do hash benchmark");
 
     boost::program_options::variables_map vm;
@@ -25,6 +27,10 @@ int main(int argc, char ** argv) {
     if (vm.count("hash")) {
         auto hp = hash_perf();
         hp.run();
+    }
+
+    if (vm.count("compress")) {
+        compress_perf().run();
     }
 
     return 0;

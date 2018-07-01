@@ -20,8 +20,9 @@ add_library(display src/display.cpp include/display.hpp)
 
 add_library(crypto_perf src/crypto_perf.cpp src/ed25519_perf.cpp include/crypto_perf.hpp include/ed25519_perf.hpp)
 add_library(hash_perf src/hash_perf.cpp include/hash_perf.hpp)
+add_library(compress_perf src/compress_perf.cpp include/compress_perf.hpp)
 add_executable(crypto_selection main.cpp)
 
-target_link_libraries(crypto_selection crypto_perf display  hash_perf ${KECCAK} ${SODIUM} ${SECP256K1} ${GMP} ed25519
-        boost_system boost_thread pthread crypto boost_program_options)
+target_link_libraries(crypto_selection crypto_perf display  hash_perf compress_perf ${KECCAK} ${SODIUM} ${SECP256K1} ${GMP} ed25519
+        boost_system boost_thread pthread crypto boost_program_options lz4 snappy)
 
