@@ -117,7 +117,14 @@ Verified 1000 messages, used: 76 milliseconds
 K12: Hash 1024M bytes data, used:955 milliseconds
 SHA256: Hash 1024M bytes data, used:2674 milliseconds
 SHA3: Hash 1024M bytes data, used:434 milliseconds
+LZ4: Ratio:1.03125
+Compress 0M bytes data, used:0 milliseconds
+SNAPPY: Ratio:1.04688
+Compress 0M bytes data, used:0 milliseconds
+ZSTD: Ratio:0
+Compress 0M bytes data, used:0 milliseconds
 ```
+
 
 # Conclusion 
 
